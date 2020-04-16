@@ -1,13 +1,16 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './App.css';
 import ApiDisplayPage from './components/ApiDisplayPage';
 
-function App() {
-  return (
-    <div >
-      <ApiDisplayPage />
-    </div>
-  );
+export default class App extends Component {
+
+  render (){
+    return (
+      <div >
+        <ApiDisplayPage />
+      </div>
+    );
+  }
+  
 }
 
-export default App;
