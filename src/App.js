@@ -12,7 +12,11 @@ export default class App extends Component {
   }
 
   async callApi() {
-    
+    try {
+      
+    } catch (e) {
+      console.log(e);
+    }
   }
 
   render (){
