@@ -16,10 +16,14 @@ export default class App extends Component {
     try {
       const response = await axios.get('http://myapi-profstream.herokuapp.com/api/d206d9/wines');
       console.log(response.data);
-      console.log(response);
+      this.setState({apiData:response.data});
     } catch (e) {
       console.log(e);
     }
+  }
+
+  componentDidMount() {
+    this.callApi();
   }
 
   render (){
