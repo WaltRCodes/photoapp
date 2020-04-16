@@ -11,6 +11,10 @@ export default class App extends Component {
     }
   }
 
+  async callApi() {
+    
+  }
+
   render (){
     return (
       <div >
