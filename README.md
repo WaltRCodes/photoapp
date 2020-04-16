@@ -1,5 +1,5 @@
 # photoapp
-![Wireframe](./Wireframe/photoapp.png)
+![Wireframe](./wireframe/photoapp.png)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
