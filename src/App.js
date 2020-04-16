@@ -13,7 +13,7 @@ export default class App extends Component {
 
   async callApi() {
     try {
-      
+      const response = await axios.get('http://myapi-profstream.herokuapp.com/api/d206d9/wines');
     } catch (e) {
       console.log(e);
     }
