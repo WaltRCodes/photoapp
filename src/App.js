@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import ApiDisplayPage from './components/ApiDisplayPage';
+import axios from 'axios';
 
 export default class App extends Component {
   constructor(props) {
@@ -14,6 +15,8 @@ export default class App extends Component {
   async callApi() {
     try {
       const response = await axios.get('http://myapi-profstream.herokuapp.com/api/d206d9/wines');
+      console.log(response.data);
+      console.log(response);
     } catch (e) {
       console.log(e);
     }
