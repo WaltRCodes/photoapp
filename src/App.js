@@ -13,9 +13,13 @@ export default class App extends Component {
   }
 
   async callApi() {
+    {/*fetch all and create innerhtml array*/}
     try {
       const response = await axios.get('http://myapi-profstream.herokuapp.com/api/d206d9/wines');
       console.log(response.data);
+      // for(let object of response.data){
+
+      // }
       this.setState({apiData:response.data});
     } catch (e) {
       console.log(e);
