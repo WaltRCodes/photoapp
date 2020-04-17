@@ -1,16 +1,21 @@
 {
     "users":[
         {
+            "id": 1,
             "user_name":"Walt",
             "password":"PASSW0RD1"
         }
     ],
     "photos":[{
+        "id": 1,
+        "user_id": 1,
         "url":"https://avatars3.githubusercontent.com/u/7140094?s=460&u=0864313efc457d4f5997f0e4025484aced95be18&v=4",
         "comments":["look at the camera","change your hair"],
         "likes": 0,
         "favorite": 0
     },{
+        "id": 2,
+        "user_id": 1,
         "url":"http://www.sfc.edu/uploaded/photos/Walter_Rada_2.jpg",
         "comments":["nice suit","congratulations"],
         "likes": 0,
