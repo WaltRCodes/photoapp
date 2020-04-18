@@ -8,7 +8,8 @@ export default class App extends Component {
     super(props);
     this.state = {
       loggedIn:false,
-      apiData:['']
+      apiData:[''],
+      contentPage:''
     }
   }
 
@@ -28,15 +29,36 @@ export default class App extends Component {
 
   componentDidMount() {
     //this.callApi();
-    let userURL = "https://my-json-server.typicode.com/WaltRCodes/photoapp/users";
-    let photoURL = "https://my-json-server.typicode.com/WaltRCodes/photoapp/photos";
-    
+    const userURL = "https://my-json-server.typicode.com/WaltRCodes/photoapp/users";
+    const photoURL = "https://my-json-server.typicode.com/WaltRCodes/photoapp/photos";
+    const calls = [axios.get(userURL),axios.get(photoURL)];
+
+    axios.all(calls).then(axios.spread((...responses) => {
+      const firstResponse = responses[0];
+      console.log(firstResponse.data);
+      const secondResponse = responses[1];
+      console.log(secondResponse.data);
+      let comments;
+      let pictureCells = secondResponse.data.map(pictureObject => <div>
+        <img src={pictureObject.url} height="200px" />
+        {comments = pictureObject.comments.map(comment => <p>comment</p>)}
+        <div>{comments}</div>
+
+      </div>);
+      this.setState({contentPage:pictureCells});
+      
+      
+    })).catch(errors => {
+      console.log(errors);
+    })
+
   }
 
   render (){
     return (
       <div >
         <ApiDisplayPage />
+        {this.state.contentPage}
       </div>
     );
   }
