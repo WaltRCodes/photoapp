@@ -28,6 +28,8 @@ export default class App extends Component {
 
   componentDidMount() {
     //this.callApi();
+    let userURL = "https://my-json-server.typicode.com/WaltRCodes/photoapp/users";
+    let photoURL = "https://my-json-server.typicode.com/WaltRCodes/photoapp/photos";
     
   }
 
