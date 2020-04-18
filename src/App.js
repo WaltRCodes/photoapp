@@ -42,6 +42,9 @@ export default class App extends Component {
       let comments;
       let pictureCells = secondResponse.data.map(pictureObject => <div>
         <img src={pictureObject.url} height="200px" />
+        <div>
+          {pictureObject.likes.length}Likes<button>Like</button><button>Bookmark</button>
+        </div>
         {comments = pictureObject.comments.map(comment => <p>{comment}</p>)}
 
       </div>);
