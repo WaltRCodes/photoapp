@@ -9,7 +9,8 @@ export default class App extends Component {
     this.state = {
       loggedIn:false,
       apiData:[''],
-      contentPage:''
+      contentPage:'',
+      whoIsLoggedIn:''
     }
   }
 
