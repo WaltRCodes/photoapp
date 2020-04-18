@@ -41,8 +41,7 @@ export default class App extends Component {
       let comments;
       let pictureCells = secondResponse.data.map(pictureObject => <div>
         <img src={pictureObject.url} height="200px" />
-        {comments = pictureObject.comments.map(comment => <p>comment</p>)}
-        <div>{comments}</div>
+        {comments = pictureObject.comments.map(comment => <p>{comment}</p>)}
 
       </div>);
       this.setState({contentPage:pictureCells});
