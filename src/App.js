@@ -27,7 +27,8 @@ export default class App extends Component {
   }
 
   componentDidMount() {
-    this.callApi();
+    //this.callApi();
+    
   }
 
   render (){
