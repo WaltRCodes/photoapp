@@ -24,28 +24,28 @@
         "user_id": 1,
         "url":"https://avatars3.githubusercontent.com/u/7140094?s=460&u=0864313efc457d4f5997f0e4025484aced95be18&v=4",
         "comments":["look at the camera","change your hair"],
-        "likes": 0,
-        "bookmark": 0
+        "likes": [],
+        "bookmark": [1]
     },{
         "id": 2,
         "user_id": 1,
         "url":"http://www.sfc.edu/uploaded/photos/Walter_Rada_2.jpg",
         "comments":["nice suit","congratulations"],
-        "likes": 0,
-        "bookmark": 0
+        "likes": [1,2,3],
+        "bookmark": [1]
     },{
         "id": 3,
         "user_id": 2,
         "url":"https://images.unsplash.com/photo-1533907650686-70576141c030?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80",
         "comments":["beautiful","I really like it"],
-        "likes": 0,
-        "bookmark": 0
+        "likes": [1,2],
+        "bookmark": [2]
     },{
         "id": 4,
         "user_id": 3,
         "url":"https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT4l6P45gfgYP5feCEv5iB5qk8LnN2Y9tagWQz2MLc8bcfoBf9W&usqp=CAU",
         "comments":["cool","nice"],
-        "likes": 0,
-        "bookmark": 0
+        "likes": [1],
+        "bookmark": [3]
     }]
 }
