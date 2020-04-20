@@ -47,7 +47,7 @@ export default class App extends Component {
           {pictureObject.likes.length}Likes 
           {pictureObject.likes.find(function (user) { return user===num}) ? <button>Liked</button>: <button>Like</button>}
           {pictureObject.bookmark.find(function (user) { return user===num}) ? <button>Bookmarked</button> : <button>Bookmark</button>}
-          {pictureObject.user_id===num ? <button>Delete your post</button> : <div></div>}
+          {pictureObject.user_id===num ? <button onClick={() => document.getElementById(pictureObject.id).style.display="none"}>Delete your post</button> : <div></div>}
         </div>
         {comments = pictureObject.comments.map(comment => <p>{comment}</p>)}
 
