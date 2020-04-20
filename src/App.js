@@ -10,7 +10,7 @@ export default class App extends Component {
       loggedIn:false,
       apiData:[''],
       contentPage:'',
-      whoIsLoggedIn:''
+      whoIsLoggedIn:1
     }
   }
 
@@ -39,11 +39,15 @@ export default class App extends Component {
       console.log(firstResponse.data);
       const secondResponse = responses[1];
       console.log(secondResponse.data);
+      let num = this.state.whoIsLoggedIn;
       let comments;
-      let pictureCells = secondResponse.data.map(pictureObject => <div>
+      let pictureCells = secondResponse.data.map(pictureObject => <div id={pictureObject.id}>
         <img src={pictureObject.url} height="200px" />
         <div>
-          {pictureObject.likes.length}Likes<button>Like</button><button>Bookmark</button>
+          {pictureObject.likes.length}Likes 
+          {pictureObject.likes.find(function (user) { return user===num}) ? <button>Liked</button>: <button>Like</button>}
+          {pictureObject.bookmark.find(function (user) { return user===num}) ? <button>Bookmarked</button> : <button>Bookmark</button>}
+          {pictureObject.user_id===num ? <button>Delete your post</button> : <div></div>}
         </div>
         {comments = pictureObject.comments.map(comment => <p>{comment}</p>)}
 
