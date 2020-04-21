@@ -26,7 +26,7 @@
         "comments":["look at the camera","change your hair"],
         "likes": [],
         "bookmark": [1],
-        "timestamp":""
+        "timestamp":"2019-06-28"
     },{
         "id": 2,
         "user_id": 1,
@@ -34,7 +34,7 @@
         "comments":["nice suit","congratulations"],
         "likes": [1,2,3],
         "bookmark": [1],
-        "timestamp":""
+        "timestamp":"2019-06-08"
     },{
         "id": 3,
         "user_id": 2,
@@ -42,7 +42,7 @@
         "comments":["beautiful","I really like it"],
         "likes": [1,2],
         "bookmark": [2],
-        "timestamp":""
+        "timestamp":"2019-03-23"
     },{
         "id": 4,
         "user_id": 3,
@@ -50,6 +50,6 @@
         "comments":["cool","nice"],
         "likes": [1],
         "bookmark": [3],
-        "timestamp":""
+        "timestamp":"2019-05-18"
     }]
 }

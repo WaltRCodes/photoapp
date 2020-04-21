@@ -64,7 +64,30 @@ export default class App extends Component {
       console.log(secondResponse.data);
       let num = this.state.whoIsLoggedIn;
       let comments;
-      let pictureCells = secondResponse.data.map(pictureObject => <div id={pictureObject.id}>
+      let sortedArray = [];
+      let mostLikes = secondResponse.data[0];
+      let mostLikesIndex=0;
+      for(let i=0;i<secondResponse.data.length;i++){
+        let currentObj = secondResponse.data[i];
+        if(currentObj.likes.length>mostLikes.likes.length){
+          mostLikes = currentObj;
+          mostLikesIndex=i;
+
+        } else if (currentObj.likes.length===mostLikes.likes.length){
+          if(new Date(currentObj.timestamp)>new Date(mostLikes.timestamp)){
+            mostLikes = currentObj;
+            mostLikesIndex=i;
+          }
+        }
+        if(i===secondResponse.data.length-1){
+          sortedArray.push(mostLikes);
+          secondResponse.data.splice(mostLikesIndex,1);
+          mostLikes = secondResponse.data[0];
+          mostLikesIndex=0;
+          i=-1;
+        }
+      }
+      let pictureCells = sortedArray.map(pictureObject => <div id={pictureObject.id}>
         <img src={pictureObject.url} height="200px" />
         <div>
           {pictureObject.likes.length}Likes 
