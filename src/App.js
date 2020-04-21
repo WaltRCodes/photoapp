@@ -12,7 +12,7 @@ export default class App extends Component {
       password:'',
       apiData:[''],
       contentPage:'',
-      whoIsLoggedIn:1,
+      whoIsLoggedIn:0,
       users:[
         {
           "user_name":"",
@@ -30,7 +30,8 @@ export default class App extends Component {
     event.preventDefault();
     for(let user of this.state.users){
       if(this.state.user_name===user.user_name && this.state.password===user.password){
-        this.setState({loggedIn:true});
+        this.setState({loggedIn:true,whoIsLoggedIn:user.id});
+        this.callApi();
       } else {
         this.setState({badpassword:<p>please check your login info and try again</p>});
       }
@@ -46,21 +47,6 @@ export default class App extends Component {
   }
 
   async callApi() {
-    {/*fetch all and create innerhtml array*/}
-    try {
-      const response = await axios.get('http://myapi-profstream.herokuapp.com/api/d206d9/wines');
-      console.log(response.data);
-      // for(let object of response.data){
-
-      // }
-      this.setState({apiData:response.data});
-    } catch (e) {
-      console.log(e);
-    }
-  }
-
-  componentDidMount() {
-    //this.callApi();
     const userURL = "https://my-json-server.typicode.com/WaltRCodes/photoapp/users";
     const photoURL = "https://my-json-server.typicode.com/WaltRCodes/photoapp/photos";
     const calls = [axios.get(userURL),axios.get(photoURL)];
@@ -88,7 +74,12 @@ export default class App extends Component {
       
     })).catch(errors => {
       console.log(errors);
-    })
+    });
+  }
+
+  componentDidMount() {
+    this.callApi();
+    
 
   }
 
