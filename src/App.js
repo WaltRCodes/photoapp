@@ -51,6 +51,11 @@ export default class App extends Component {
     const userURL = "https://my-json-server.typicode.com/WaltRCodes/photoapp/users";
     const photoURL = "https://my-json-server.typicode.com/WaltRCodes/photoapp/photos";
     const calls = [axios.get(userURL),axios.get(photoURL)];
+    //https://flaviocopes.com/how-to-sort-array-by-date-javascript/
+    let a = new Date('2019-06-28');
+    let b = new Date('2019-06-10');
+    console.log(a," ",b);
+    console.log(a>b);
 
     axios.all(calls).then(axios.spread((...responses) => {
       const firstResponse = responses[0];
