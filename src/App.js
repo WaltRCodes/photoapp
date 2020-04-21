@@ -76,7 +76,7 @@ export default class App extends Component {
         {comments = pictureObject.comments.map(comment => <p>{comment}</p>)}
 
       </div>);
-      this.setState({contentPage:pictureCells});
+      this.setState({contentPage:pictureCells, users:firstResponse.data});
       
       
     })).catch(errors => {
