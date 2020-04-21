@@ -14,6 +14,19 @@ export default class App extends Component {
       contentPage:'',
       whoIsLoggedIn:1
     }
+    this.checkPassword = this.checkPassword.bind(this);
+    this.takeUsername = this.takeUsername.bind(this);
+    this.takePassword = this.takePassword.bind(this);
+  }
+
+  checkPassword(event){
+    event.preventDefault()
+  }
+
+  takeUsername(event){
+  }
+
+  takePassword(event){
   }
 
   async callApi() {
