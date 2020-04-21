@@ -99,7 +99,7 @@ export default class App extends Component {
         {this.state.loggedIn ? <div>Navbar<br />{this.state.contentPage}</div>:
         <div>
           Please log in
-          <form>
+          <form onSubmit={this.checkPassword}>
           <label>
               Username
               <input type="text" onChange={this.takeUsername} placeholder="username"/>
