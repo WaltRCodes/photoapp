@@ -19,7 +19,8 @@ export default class App extends Component {
           "password":""
         }
     ],
-    badpassword:''
+    badpassword:'',
+    displayPage:''
     }
     this.checkPassword = this.checkPassword.bind(this);
     this.takeUsername = this.takeUsername.bind(this);
