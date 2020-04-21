@@ -18,7 +18,8 @@ export default class App extends Component {
           "user_name":"",
           "password":""
         }
-    ]
+    ],
+    badpassword:''
     }
     this.checkPassword = this.checkPassword.bind(this);
     this.takeUsername = this.takeUsername.bind(this);
@@ -27,7 +28,13 @@ export default class App extends Component {
 
   checkPassword(event){
     event.preventDefault();
-
+    for(let user of this.state.users){
+      if(this.state.user_name===user.user_name && this.state.password===user.password){
+        this.setState({loggedIn:true});
+      } else {
+        this.setState({badpassword:<p>please check your login info and try again</p>});
+      }
+    }
   }
 
   takeUsername(event){
@@ -104,6 +111,7 @@ export default class App extends Component {
           </label>
           <br />
           </form>
+          {this.state.badpassword}
         </div>}
       </div>
     );
