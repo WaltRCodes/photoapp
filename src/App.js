@@ -65,7 +65,10 @@ export default class App extends Component {
     return (
       <div >
         <ApiDisplayPage />
-        {this.state.contentPage}
+        {this.state.loggedIn ? this.state.contentPage:
+        <div>
+          Please log in
+          </div>}
       </div>
     );
   }
