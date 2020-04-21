@@ -85,7 +85,10 @@ export default class App extends Component {
         {this.state.loggedIn ? this.state.contentPage:
         <div>
           Please log in
-          </div>}
+          <form>
+
+          </form>
+        </div>}
       </div>
     );
   }
