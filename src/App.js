@@ -88,7 +88,11 @@ export default class App extends Component {
     return (
       <div >
         <ApiDisplayPage />
-        {this.state.loggedIn ? <div>Navbar<br />{this.state.contentPage}</div>:
+        {this.state.loggedIn ? <div>
+          <div>Home | Profile | Bookmarks</div>
+          <br />
+        {this.state.contentPage}
+        </div>:
         <div>
           Please log in
           <form onSubmit={this.checkPassword}>
