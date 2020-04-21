@@ -86,7 +86,16 @@ export default class App extends Component {
         <div>
           Please log in
           <form>
-
+          <label>
+              Username
+              <input type="text" onChange={this.takeUsername} placeholder="username"/>
+          </label>
+          <br />
+          <label>
+              Password
+              <input type="password" onChange={this.takePassword} placeholder="password"/>
+          </label>
+          <br />
           </form>
         </div>}
       </div>
