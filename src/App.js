@@ -20,7 +20,8 @@ export default class App extends Component {
   }
 
   checkPassword(event){
-    event.preventDefault()
+    event.preventDefault();
+
   }
 
   takeUsername(event){
@@ -82,7 +83,7 @@ export default class App extends Component {
     return (
       <div >
         <ApiDisplayPage />
-        {this.state.loggedIn ? this.state.contentPage:
+        {this.state.loggedIn ? <div>Navbar<br />{this.state.contentPage}</div>:
         <div>
           Please log in
           <form>
