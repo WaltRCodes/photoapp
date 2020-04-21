@@ -12,7 +12,13 @@ export default class App extends Component {
       password:'',
       apiData:[''],
       contentPage:'',
-      whoIsLoggedIn:1
+      whoIsLoggedIn:1,
+      users:[
+        {
+          "user_name":"",
+          "password":""
+        }
+    ]
     }
     this.checkPassword = this.checkPassword.bind(this);
     this.takeUsername = this.takeUsername.bind(this);
