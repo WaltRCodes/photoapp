@@ -28,6 +28,7 @@ export default class App extends Component {
   }
 
   takePassword(event){
+    this.setState({password: event.target.value});
   }
 
   async callApi() {
