@@ -110,6 +110,10 @@ export default class App extends Component {
               <input type="password" onChange={this.takePassword} placeholder="password"/>
           </label>
           <br />
+          <label>
+              <input type="submit" value="submit"/>
+          </label>
+          <br />
           </form>
           {this.state.badpassword}
         </div>}
