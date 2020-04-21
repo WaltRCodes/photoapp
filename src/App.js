@@ -8,6 +8,8 @@ export default class App extends Component {
     super(props);
     this.state = {
       loggedIn:false,
+      user_name:'',
+      password:'',
       apiData:[''],
       contentPage:'',
       whoIsLoggedIn:1
