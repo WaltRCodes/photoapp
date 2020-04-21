@@ -24,6 +24,7 @@ export default class App extends Component {
   }
 
   takeUsername(event){
+    this.setState({user_name: event.target.value});
   }
 
   takePassword(event){
